@@ -1,3 +1,81 @@
-body{
-    background-color: rebeccapurple;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-size:8px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    overflow-x: hidden;
+}
+
+#about-me{
+    background-color: blue;
+}
+#contact-me{
+    background-color: red;
+}
+#project-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    row-gap: 20px;
+    
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.project > img{
+    display: block;
+    max-height: auto;
+    max-width: 100%;
+}
+.project >div{
+    height: 100%;
+    
+}
+
+section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 14px;
+    width: 100%;
+    
+}
+section > p{
+    margin-top: 5px;
+    grid-column: 1/3;
+    
+}
+#project-links{
+   text-align: right;
+}
+a img{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+@media (min-width:768px){
+    #project-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(min-width:1024px){
+    #project-grid{
+        grid-template-columns: repeat(3,1fr);
+        
+    }
 }

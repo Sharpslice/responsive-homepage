@@ -26,7 +26,7 @@
     grid-template-columns: 1fr;
     justify-content: center;
     row-gap: 20px;
-    max-width: 768px;
+    
 }
 .project{
     display: flex;
@@ -71,5 +71,11 @@ a img{
 @media (min-width:768px){
     #project-grid{
         grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(min-width:1024px){
+    #project-grid{
+        grid-template-columns: repeat(3,1fr);
+        
     }
 }
